@@ -13,7 +13,7 @@ defmodule Pow.Extension.Ecto.Schema.MigrationTest do
     @impl true
     def attrs(_config) do
       [
-        {:custom_string, :string, null: false},
+        {:custom_string, :string},
         {:custom_at, :utc_datetime}
       ]
     end
