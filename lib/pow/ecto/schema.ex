@@ -371,8 +371,8 @@ defmodule Pow.Ecto.Schema do
 
   @doc false
   def __require_fields__(module) do
-    ecto_fields      = Module.get_attribute(module, :ecto_fields)
-    changeset_fields = Module.get_attribute(module, :changeset_fields)
+    ecto_fields      = Module.get_attribute(module, :ecto_fields) |> IO.inspect(label: "ecto_fields")
+    changeset_fields = Module.get_attribute(module, :changeset_fields) |> IO.inspect(label: "changeset_fields")
 
     module
     |> Module.get_attribute(:pow_fields)

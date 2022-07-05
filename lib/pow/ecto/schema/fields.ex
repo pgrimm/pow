@@ -18,6 +18,7 @@ defmodule Pow.Ecto.Schema.Fields do
     user_id_field = Schema.user_id_field(config)
 
     [{user_id_field, :string}] ++ @attrs
+    |> IO.inspect(label: __MODULE__)
   end
 
   @doc """
